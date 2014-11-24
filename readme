@@ -2,5 +2,8 @@ use origin_exp_paper rather than defalt git use of origin to push to git
 
 to update: 
  	git add . or git add file_name
-then: 
-	
+then to commit to local repo: 
+	git commit -m "some message is needed"
+to send to github:
+
+
