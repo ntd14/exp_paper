@@ -1,0 +1,6 @@
+use origin_exp_paper rather than defalt git use of origin to push to git
+
+to update: 
+ 	git add . or git add file_name
+then: 
+	
