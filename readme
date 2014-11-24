@@ -5,5 +5,9 @@ to update:
 then to commit to local repo: 
 	git commit -m "some message is needed"
 to send to github:
+	git push -u origin_exp_paper master
 
+If origin_exp_paper is undefined use:
+	git remote add origin_exp_paper https://github.com/ntd14/exp_paper.git
+	
 
