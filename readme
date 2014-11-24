@@ -10,4 +10,4 @@ to send to github:
 If origin_exp_paper is undefined use:
 	git remote add origin_exp_paper https://github.com/ntd14/exp_paper.git
 	
-to update repo from eclipse right click exp_paper click commit
+to update repo from eclipse go to git tab in top right, right click exp_paper click commit
