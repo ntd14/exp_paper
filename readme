@@ -1,4 +1,4 @@
-use origin_exp_paper rather than defalt git use of origin to push to git
+use origin_exp_paper rather than default git use of origin to push to git
 
 to update:
  	git add . or git add file_name
@@ -13,3 +13,18 @@ If origin_exp_paper is undefined use:
 to update repo from eclipse go to git tab in top right, right click exp_paper click commit
 then push to upstream.
 Remeber to save changes
+
+
+to convert to .doc for clemens:
+ 	mk4ht mzlatex ./exp_paper.tex "html, mathtools"
+produces an xml and a css file. Take the xml file and delete the first line, this is the declaration that it is a xml not html
+change the xml extension to .doc and copy (along with the .css file) to a computer with word
+open in word, may have to open word then then open the file. if there is some dtd error then the xml declaration may still be there
+save as a word 2010 or whatever file.
+
+
+Possible journals:
+Trees
+Silva Fennica
+holzforschung
+NZJFS
