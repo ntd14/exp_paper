@@ -11,7 +11,9 @@
 \emph{New Zealand School of Forestry, University of Canterbury}
 \begin{abstract}
 This paper presents a number of important constants needed for the use of
- mathematical modelling of greenwood \textit{Pinus radiata}. The constants include all three necessary Youngs and shear moduli along with the six Poisson ratios needed for describing orthotropic materials in the elastic domain. Further yield surfaces and ultimate tensile strength are investigated. The accuracy of the various measurements are discussed in detail.
+ mathematical modelling of greenwood \textit{Pinus radiata}. The constants include all three necessary Youngs and shear
+ moduli along with the six Poisson ratios needed for describing orthotropic materials in the elastic domain.
+ Further yield surfaces and ultimate tensile strength are investigated. The accuracy of the various measurements are discussed in detail.
 \end{abstract}
 
 \thispagestyle{empty}
@@ -20,52 +22,116 @@ This paper presents a number of important constants needed for the use of
 \setcounter{page}{1}
 
 \section{Introduction}
-While density and acoustic tests are common practice for obtaining dynamic modulus (which can in turn be used to estimate the static modulus \citep{barker_properties_1998,lindstrom_stiffness_2004}) in both timber research and industry, little information about the underlying structure of wood is obtained from these tests. Wood is often dried to 6-12\% moisture content before conducting any experimental work, which has been observed to alter the mechanical properties \citep{skaar_springer_1988,ozyhar_moisture-dependent_2013}. Investigating dry wood gives a poor representation of the living organism, leaving scientists interested in the growth of trees somewhat in the dark when considering the way trees react to mechanical phenomenan. Unfortunately there is a lack of information on both green (the state of wood when it is inside a living tree) and core wood (wood produced by a young cambium).
+While density and acoustic tests are common practice for obtaining dynamic modulus (which can in turn be used to estimate
+the static modulus \citep{barker_properties_1998,lindstrom_stiffness_2004}) in both timber research and industry, little
+information about the underlying structure of wood is obtained from these tests. Wood is often dried to 6-12\% moisture
+content before conducting any experimental work, which has been observed to alter the mechanical properties
+\citep{skaar_springer_1988,ozyhar_moisture-dependent_2013}. Investigating dry wood gives a poor representation of the
+living organism, leaving scientists interested in the growth of trees somewhat in the dark when considering the way trees
+react to mechanical phenomenan. Unfortunately there is a lack of information on both green (the state of wood when it is inside
+a living tree) and core wood (wood produced by a young cambium).
 
-Wind loading can cause mechanical failure which can decrease the value of processed timber due to defects, the associated financial loss has led to a substantial amount of research on predicting wind throw and wind damage risk for commercial species \citep{gardiner_review_2008}. However, these models do not investigate the structural failure within the tree, they only attempt to identify how likely failure is to occur in a particular environment. In areas with less pronounced prevailing wind directions there may be an effect on the stiffness of the trees in order to compensate for the multi-directional loadings \citep{apiolaza_characterization_2011,kern_mechanical_2005}, this reduction in stiffness can result in a timber product of lower value.
+Wind loading can cause mechanical failure which can decrease the value of processed timber due to defects, the associated financial
+loss has led to a substantial amount of research on predicting wind throw and wind damage risk for commercial species
+\citep{gardiner_review_2008}. However, these models do not investigate the structural failure within the tree,
+they only attempt to identify how likely failure is to occur in a particular environment. In areas with less pronounced
+prevailing wind directions there may be an effect on the stiffness of the trees in order to compensate for the multi-directional
+loadings \citep{apiolaza_characterization_2011,kern_mechanical_2005}, this reduction in stiffness can result in a timber product
+of lower value.
 
-One way of investigating mechanical phenomenon present in tree stems is the use of mathematical models, using the Finite Element Method (FEM). However because of the size of the tree, modelling an entire tree from the molecular level is infeasible, so homogenization is used. In order to use these methods experimental data is required to parametrize them. Full sets of constants even for dry timber are hard to find and to the best of our knowledge there are no full sets available for green or core wood radiata. Proportional limit and ultimate failure surfaces for all directions in green and core wood have also not been reported previously. Lack of available data is an issue for a number of current problems in plant biophysics.
+One way of investigating mechanical phenomenon present in tree stems is the use of mathematical models, using the
+Finite Element Method (FEM). However because of the size of the tree, modelling an entire tree from the molecular
+level is infeasible, so homogenization is used. In order to use these methods experimental data is required to parametrize them.
+Full sets of constants even for dry timber are hard to find and to the best of our knowledge there are no full sets available
+for green or core wood radiata. Proportional limit and ultimate failure surfaces for all directions in green and core wood
+have also not been reported previously. Lack of available data is an issue for a number of current problems in plant biophysics.
 
-The purpose of this chapter is to present a number of necessary material constants for describing green core and outer wood as an orthotropic material. A set of static moduli and Poisson ratios for green core and outer wood in the radial, tangential and longitudinal (to the grain) directions. The small study was completed with \textit{Pinus radiata} selected from plantations in Canterbury, New Zealand.
+The purpose of this paper is to present a number of necessary material constants
+for describing green core and outer wood as an orthotropic material.
+A set of static moduli and Poisson ratios for green core and outer wood in the radial, tangential
+and longitudinal (to the grain) directions. The small study was completed with \textit{Pinus radiata}
+selected from plantations in Canterbury, New Zealand.
 
 \section{Experimental Method}
-Current standards such as BS 373:1957 \citep{bs_methods_1957} and AS/NZS 4063.1:2010 \citep{aus/nzs_characterization_2010} apply for dry timber and have been developed for testing timber for engineering applications. Because of this design consideration, and the large differences in testing procedures between some of these standards they are not necessarily the most appropriate when considering green wood for use in biomechanics or biophysics investigations. The techniques used in this paper do borrow from these standards however have been modified in order to make them more applicable to the current task and equipment.
-
 \subsection{Sample Selection and Preparation}
-One consideration in FEM is the assumption that the field variable inside the elements can be approximated by a simple function, usually a polynomial \citep{rao_finite_1999}, because of this it is necessary to be testing samples as close to homogeneous as possible. The samples were machined to sample sizes which were as small as practically possible for the available equipment. The goal was to minimize the variation in Micro-Fibril Angle (MFA), green density and other properties within a sample, because of the differences between early and late wood variation is evident in all samples tested. All samples were sourced as green as possible from the sorting table at a local mill and the  boards chosen to give extreme values of green density and stiffness combinations for the species as can be seen in Table \ref{table:mill samples table}. This was achieved by using tree tap \citep{Chauhan_methods_2013} and portable scales at the mill to estimate the dynamic modulus of the entire board.
+Green radiata pine (\textit{Pinus radiata}) samples were sourced from a sawmill
+in Canterbury, New Zealand. Four boards were chosen from approximately
+30 boards to represent extremes of outerwood and corewood based on green density
+and dynamic modulus (Table \ref{table:mill samples table}). Green dynamic
+modulus was calculated from acoustic velocity measurements and green mass \citep{Chauhan_methods_2013}.
 
-The samples were docked into approximately 500 mm lengths and stored in sealed bags with excess water in a refrigerated room. The samples were cut using a bandsaw and precision milled into the required shapes as described in the following sections. Each test was repeated 6 times for each sample (i.e. 6 specimens of each sample were made for each test). When specimens were selected they were chosen to have no knots or other visual defects, with grain as straight as possible. These shapes were again stored in sealed bags with excess water until their testing. The specimens showed no signs of deterioration during storage. At this time the samples were also measured for acoustic velocity  using the NZSOF disk scanner.
+The samples were docked into approximately 500 mm lengths and stored in sealed
+bags with excess water at 5\(^\circ C\)  subsequently 6 defect-free, straight
+grained test specimens of the required shape and orientation were machined from each of
+the four boards and stored in sealed bags with excess water until testing.
+Prior to mechanical testing each specimen was weighed and it's volume measured
+by water displacement.
 
 \subsection{Testing}
-Samples were removed from their sealed bags at testing time, weighed and volume measured using the displacement method. The samples were placed into an Instron 5566 set-up for the appropriate test. Two cameras (a Nikion D5000 and a D5200 with 60mm micro lenses) were used to take images during the test in order to track displacements within the sample. These cameras were focused on the sample, one imaging each plane perpendicular to the axis of loading. The setup can be seen in Figure \ref{fig:setup} timelapse photography was used taking images every 3 seconds during the test, controlled via gphoto2 \citep{contributors_gphoto2_2002}.
+The specimens were placed into a Universal Testing Machine (UTM)(Instron 5566)
+set-up for the appropriate test. Displacement was tracked on the two faces
+perpendicular to the axis of loading with two digital cameras fitted with 60 mm
+micro lenses. Timelapse photography was used taking images
+every 3 seconds during the test, controlled via gphoto2 \citep{contributors_gphoto2_2002}.
 
-\subsubsection{Pure Compression}
-Samples approximately 15 x 15 x 30 mm were used as is shown in Figure \ref{fig:compression_samples} these were cut so that three different compression axis (the 30 mm axis of the specimens) could be investigated (longitudinal, radial and tangential to the grain). All three directions are tracked for each orientation using the digital cameras.
-The Universal Testing Machine (UTM) was run at a constant velocity applying compression to the top of the sample at a velocity of 1.5 mm per minute. During this time the load cell which the sample is resting on takes load measurements at a minimum of 1 reading per second, with more frequent recordings as the load increases. The accuracy of the load cell is 0.1 N The test is run for a period of 300 seconds, giving a displacement of 7.5 mm which equates to a strain of approximately 0.25. During the test, images of the sample are taken every 3 seconds (100 images for the test).
+For compression testing, samples approximately 15 x 15 x 30 mm were used with
+their grain oriented in longitudinal, radial or tangential direction.
+The UTM fitted with a x KN load cell having an accuracy of 0.1 N was run at a
+constant velocity of 1.5 mm per min for 300 seconds applying compression to the
+top of the sample.
 
-\subsubsection{Pure Tension}
-Samples were created in a 'bone' shape as shown in Figure \ref{fig:tension_samples} with the total dimensions approximately 50 x 25 x 6.5 mm with the breakage plane having an area of approximately 6.5 x 6.5 mm. With the exception of the longitudinal direction, where a straight stick test was used. The reasoning for the two different sample shapes is that in the radial or tangential direction the jaws of the testing machine damage the samples causing an artificial fracture point. In the longitudinal direction this is not an issue however the samples fail in shear along the grain before tension across it when the bone shape was used. Again the tests in all three directions were captured as above.
+Tension testing used bone shaped samples with dimensions approximately 50 x 25 x
+6.5 mm with the breakage plane having an area of approximately 6.5 x 6.5 mm.
+With the exception of the longitudinal direction, where a straight stick test was used.
 
-\subsubsection{Shear}
-Shear stresses within orthotropic materials are assumed to be independent of other stresses within the material. Again the three directions were considered, however perpendicular displacements were not tracked for the off axis terms. Figure \ref{fig:shear_samples} shows the layout of the samples. In this case the shear plane is approximately 15 x 15 mm. The data from the UTM is used directly.
+For the shear plane L shaped samples with a shear plane approximately 15 x 15 mm
+was used.
 
-\subsection{Post testing mechanical properties}
-Once the specimens had been mechanically tested they were oven dried at 104\(^\circ C\) until a representative sample was no longer losing weight 48 hours apart. Each sample was weighted and volume measured using the displacement method. From one specimen of each sample and test (ie 12 in total) a small strip approximately 1 x 5 x 10 mm was taken for x-ray diffraction testing. The micro-fibril angle and standard deviation of the micro-fibrils were obtained using the methods described in \citet{cave_measuring_1998} and \citet{cave_interpretation_1998}.
+Once the specimens had been mechanically tested they were oven dried at 104\(^\circ C\) until a representative sample was no
+longer losing weight 48 hours apart. Each sample was weighted and volume measured using the displacement method.
+From one specimen of each sample and test (ie 12 in total) a small strip approximately 1 x 5 x 10 mm was taken for
+x-ray diffraction testing. The micro-fibril angle and standard deviation of the micro-fibrils were obtained using the
+methods described in \citet{cave_measuring_1998} and \citet{cave_interpretation_1998}.
 
-\section{Computation}
-The time and load applied was extracted from the UTM data for use with the photo collections to create stress strain curves. This was implemented using Digital Image Correlation and Tracking with Matlab scripts \citep{chris_eberl_robert_thompson_daniel_gianola_digital_2006} to track identifiable points within the photos throughout each series to obtain strain  versus photo number curves. The time of each photo was obtained from the EXIF data attached to the photo obtained from the Python Imaging Library \citep{lundh_python_1995} and used to match the corresponding load applied by the UTM along with the dimension measurements which are used to calculate the stress strain curves.
+The time and load applied was extracted from the UTM data for use with the photo collections to create stress strain curves.
+This was implemented using Digital Image Correlation and Tracking with Matlab scripts
+\citep{chris_eberl_robert_thompson_daniel_gianola_digital_2006} to track identifiable points within the photos throughout
+each series to obtain strain  versus photo number curves. The time of each photo was obtained from the EXIF data attached
+to the photo obtained from the Python Imaging Library \citep{lundh_python_1995} and used to match the corresponding
+load applied by the UTM along with the dimension measurements which are used to calculate the stress strain curves.
 
-During the process of extracting strain information from the images, a visual inspection of the data was undertaken. This involved using displacement versus image number, displacement vs neighbour's displacement and area of interest selection (available from \citet{chris_eberl_robert_thompson_daniel_gianola_digital_2006}) to determine the points which have been tracked correctly within the photo series. One-Dimensional average strains are taken in both the vertical and horizontal direction.
+During the process of extracting strain information from the images, a visual inspection of the data was undertaken.
+This involved using displacement versus image number, displacement vs neighbour's displacement and area of interest selection
+(available from \citet{chris_eberl_robert_thompson_daniel_gianola_digital_2006}) to determine the points which have been
+tracked correctly within the photo series. One-Dimensional average strains are taken in both the vertical and horizontal direction.
 
-Because the UTM runs at a set velocity it is possible to estimate the strain on the sample, although this tends to slightly overestimate the strain. Initially there is a period of motion before the compression plate comes into contact and re orientates  the sample, (although this is minimal) providing a good estimation to select the accuracy tracked points. The horizontal direction within the photographs is used to track the displacement perpendicular to the applied load. Here the assumption is made that points tracked accuracy in the vertical direction are also tracked reliably in the horizontal direction.
+Because the UTM runs at a set velocity it is possible to estimate the strain on the sample, although this tends to slightly
+overestimate the strain. Initially there is a period of motion before the compression plate comes into contact and re orientates
+the sample, (although this is minimal) providing a good estimation to select the accuracy tracked points.
+The horizontal direction within the photographs is used to track the displacement perpendicular to the applied load.
+Here the assumption is made that points tracked accuracy in the vertical
+direction are tracked reliably in the horizontal direction.
 
 \subsection{Calculation of the Elastic Modulus}
 \label{sec:calc_E}
-For each test of each specimen a visual inspection of the stress strain curves is undertaken, the initial reorientation of the sample, resulting in a curve before the linear elastic region is discarded, and the linear portion of the stress strain curve identified by overlaying a linear model \(y=mx\) to the data being considered. Once there was as little deviation between the data and model as possible, this was considered the elastic region with the Elastic modulus \(E\) being the gradient \(m\) of the model. The end point of the fitted model is considered the limit of proportionality, and it is assumed this is equal to the yield point. This may provide a slightly lower yield point estimate than some other techniques for determining the yield point, such as taking the  intersection  between this line and the line tangent to the peak of the plastic curve.
+For each test of each specimen a visual inspection of the stress strain curves is undertaken, the initial reorientation of the sample,
+resulting in a curve before the linear elastic region is discarded, and the linear portion of the stress strain curve identified
+by overlaying a linear model \(y=mx\) to the data being considered. Once there was as little deviation between the data and model
+as possible, this was considered the elastic region with the Elastic modulus \(E\) being the gradient \(m\) of the model.
+The end point of the fitted model is considered the limit of proportionality, and it is assumed this is equal to the yield point.
+This may provide a slightly lower yield point estimate than some other techniques for determining the yield point, such as taking the
+ intersection  between this line and the line tangent to the peak of the plastic curve.
 
 \subsection{Calculation of the Poisson Ratios}
 
-Poisson ratios defined as \(v = -d\epsilon_x /d\epsilon_y \)  \citep{bodig_jozsef_jayne_mechanics_1982} (where \(\epsilon\) is strain, \(x\) is transverse direction and \(y\) is axial direction) from the method in section \ref{sec:calc_E} the slope of the elastic region of the stress strain curve is known for both the \(x\) and \(y\) directions. In \(y\) this is the Young's Modulus, defined as \(E_y = \sigma_y / \epsilon_y\) (where \(\sigma\) is stress)  \citep{bodig_jozsef_jayne_mechanics_1982} and in the \(x\) direction \(S_x = \sigma_y / \epsilon_x\) (i.e. the force per unit area applied in the \(y\) direction results in a displacement in the \(y\) and a different displacement in the \(x\) direction related by the Poisson ratio). Therefore \(S_x = \sigma_y / \epsilon_x \) and \(E_y = \sigma_y / \epsilon_y\) so \(-\epsilon_x / \epsilon_y = E_y/S_x\) giving \(v_{yx} = -E_y/S_x\)
+Poisson ratios defined as \(v = -d\epsilon_x /d\epsilon_y \)  \citep{bodig_jozsef_jayne_mechanics_1982} (where \(\epsilon\)
+is strain, \(x\) is transverse direction and \(y\) is axial direction) from the method in section \ref{sec:calc_E} the slope
+of the elastic region of the stress strain curve is known for both the \(x\) and \(y\) directions. In \(y\) this is the Young's
+Modulus, defined as \(E_y = \sigma_y / \epsilon_y\) (where \(\sigma\) is stress)  \citep{bodig_jozsef_jayne_mechanics_1982} and
+in the \(x\) direction \(S_x = \sigma_y / \epsilon_x\) (i.e. the force per unit area applied in the \(y\) direction results in a
+displacement in the \(y\) and a different displacement in the \(x\) direction related by the Poisson ratio).
+Therefore \(S_x = \sigma_y / \epsilon_x \) and \(E_y = \sigma_y / \epsilon_y\) so \(-\epsilon_x / \epsilon_y = E_y/S_x\)
+giving \(v_{yx} = -E_y/S_x\)
 
 \subsection{Determining Elastic Moduli and Poisson ratios for use with the orthotropic assumption}
 \label{sec:orthotropic_assumption}
@@ -75,18 +141,44 @@ Orthotropic materials have symmetry giving rise to the following equalities \cit
 \frac{v_{yx}}{E_y}=\frac{v_{xy}}{E_x},\hspace{0.5cm} \frac{v_{zx}}{E_z}=\frac{v_{xz}}{E_x},\hspace{0.5cm} \frac{v_{yz}}{E_y}=\frac{v_{zy}}{E_z}
 \end{equation}
 
-However from the experiments the equalities presented in equation \ref{eqn:equalities} do not hold. This is probably due to a number of reasons, such as the errors inherent in the method of measurements. While the difference between the experimental and predicted values (by the equalities) is usually around 30-50\% of experimental value it does range from near 0\% to near 200\%. In order to ensure these equalities hold (which is necessary for the assumption of wood being an orthotropic material) optimization is used to find the values which deviate lest from all of the experimental values while still satisfying the equality constraints above. Due to the larger absolute values of some constants (for example \(E_l\)) the deviation is considered as normalized against the 95\% confidence intervals of the mean values in order to give every variable an even weighting for its accuracy. The optimization uses the above constraints and the following objective function:
+However from the experiments the equalities presented in equation \ref{eqn:equalities} do not hold. This is probably due
+to a number of reasons, such as the errors inherent in the method of measurements. In order to ensure these equalities hold (which is necessary for the assumption of wood being an
+optimization is used to find the values which deviate least from all of the
+experimental values while still satisfying the equality constraints above. Due to the larger absolute values of some constants (for example \(E_l\))
+the deviation is considered as normalized against the 95\% confidence intervals of the mean values in order to give every
+variable an even weighting for its accuracy. The optimization uses the above constraints and the following objective function:
 \begin{equation}\label{eqn:min}
 min\sum \frac{|\delta_i - \gamma_i|}{ \theta_i} \hspace{0.5cm} i = E_r, E_t, E_l, v_{rt}, v_{tr}, v_{tl}, v_{lt}, v_{lr}, v_{rl}
 \end{equation}
-Where \(\delta_i\) is the experimental value of \(i\), \(\gamma_i\) is the new value and \(\theta_i\) is the 95\% confidence interval of \(\delta_i\). This optimization was implemented in a least squares sense using the  python algorithm scipy.optimize.fmin\_slsqp \citep{jones_scipy:_2001}. It should be noted that setting the 95\% confidence intervals as bounds worked for all but one case. The HS sample when tested under tension fails to converge, due to the inequality constraints being incompatible with any combination within the bounds. This is redeemed by increasing the bound to the 99.9\% confidence intervals. An average of  Elastic moduli obtained from both compression and tension tests was also undertaken. For the \(r\) and \(t\) directions the values from the non axial plane for each tension and compression were averaged, whereas for the \(l\) direction all measurements were averaged. The Poisson ratios from compression tests were used. The reasons for using these particular values are discussed in section \ref{sec:dis_error}.
+Where \(\delta_i\) is the experimental value of \(i\), \(\gamma_i\) is the new value and \(\theta_i\) is the 95\% confidence
+interval of \(\delta_i\). This optimization was implemented in a least squares sense using the  python algorithm
+scipy.optimize.fmin\_slsqp \citep{jones_scipy:_2001}. It should be noted that setting the 95\% confidence intervals as bounds
+worked for all but one case. The Stiff Outerwood sample when tested under tension fails to converge, due to the inequality
+constraints being incompatible with any combination within the bounds. This is redeemed by increasing the bound to the 99.9\%
+confidence intervals. An average of  Elastic moduli obtained from both compression and tension tests was also undertaken.
+For the \(r\) and \(t\) directions the values from the non axial plane for each tension and compression were averaged,
+whereas for the \(l\) direction all measurements were averaged. The Poisson ratios from compression tests were used.
+The reasons for using these particular values are discussed in section \ref{sec:dis_error}.
 
 \subsection{Proportional limit (Yield point) Criteria and ultimate failure}
 \label{sec:TW}
-The failure criterion presented by \citet{tsai_general_1971} provides a general theory of strength for anisotropic materials, other papers have since used this failure criterion and it has been suggested as an appropriate failure criterion for wood and wood products \citep{mackenzie-helnwein_rate-independent_2005,mackenzie-helnwein_analysis_2005}.
-Due to the use and acceptance of the theory in other research along with its treatment of experimental results allowing for pure tension and compression to be regarded separately make it a good choice for investigation into the properties of green wood. The separate treatment of pure tension and compression is needed as wood has been reported to behave substantially differently under the two regimes \citep{ozyhar_moisture-dependent_2013,bodig_jozsef_jayne_mechanics_1982}. Shear loading is extremely difficult to test within wood due to the material structure being very week in planes perpendicular to the longitudinal axis (i.e. separation between cells requires much less force than breakdown of the cells themselves). The problem of separation is evident in shear tests where the samples are likely to split under the rotational loading (although this loading is assumed to be negligible, it is often significant \citep{bodig_jozsef_jayne_mechanics_1982}) between the cells rather than fracture through the desired plane. In the future this could be overcome by using different equipment and more sophisticated shear tests such as those presented in \citep{bs_methods_1957} or  \citet{kollmann_f._cote_principles_1968}. It has also been suggested that shear properties are best derived from torsion or various bending tests \citep{moden_micromechanics_2008}.
+The failure criterion presented by \citet{tsai_general_1971} provides a general theory of strength for anisotropic materials,
+other papers have since used this failure criterion and it has been suggested as an appropriate failure criterion for wood and
+wood products \citep{mackenzie-helnwein_rate-independent_2005,mackenzie-helnwein_analysis_2005}.
+Due to the use and acceptance of the theory in other research along with its treatment of experimental results allowing for pure
+tension and compression to be regarded separately make it a good choice for investigation into the properties of green wood.
+The separate treatment of pure tension and compression is needed as wood has been reported to behave substantially differently
+under the two regimes \citep{ozyhar_moisture-dependent_2013,bodig_jozsef_jayne_mechanics_1982}. Shear loading is extremely
+difficult to test within wood due to the material structure being very week in planes perpendicular to the longitudinal axis
+(i.e. separation between cells requires much less force than breakdown of the cells themselves). The problem of separation is
+evident in shear tests where the samples are likely to split under the rotational loading (although this loading is assumed to
+be negligible, it is often significant \citep{bodig_jozsef_jayne_mechanics_1982}) between the cells rather than fracture through
+the desired plane. In the future this could be overcome by using different equipment and more sophisticated shear tests such as
+those presented in \citep{bs_methods_1957} or  \citet{kollmann_f._cote_principles_1968}. It has also been suggested that shear
+properties are best derived from torsion or various bending tests \citep{moden_micromechanics_2008}.
 
-The full power of \citet{tsai_general_1971} failure criterion was not used in this paper. The off axis interaction terms are ignored. The implementation of Tsai and Wu's failure criterion is described in equation \ref{equ:TW}
+The full power of \citet{tsai_general_1971} failure criterion was not used in this paper. The off axis interaction terms are ignored.
+The implementation of Tsai and Wu's failure criterion is described in equation \ref{equ:TW}
 \begin{equation}\label{equ:TW}
 \boldsymbol{\sigma}^T\boldsymbol{q} + \boldsymbol{\sigma}^T\boldsymbol{P\sigma} -1 = 0
 \end{equation}
@@ -124,7 +216,8 @@ Where:
 	\end{bmatrix}
 \end{equation}
 
-with \(\boldsymbol{\sigma}\) as the stress vector, \(F_{ii}\), \(F_{ij}\), \(F_{iiii}\) and \(F_{ijij}\) described in equations \ref{equ:F_vals1} to \ref{equ:F_vals4}:
+with \(\boldsymbol{\sigma}\) as the stress vector, \(F_{ii}\), \(F_{ij}\), \(F_{iiii}\) and \(F_{ijij}\) described in
+equations \ref{equ:F_vals1} to \ref{equ:F_vals4}:
 
 \begin{equation}\label{equ:F_vals1}
 F_{ii} = \frac{1}{f_{it}}-\frac{1}{f_{ic}} \hspace{0.5cm} i = r,t,l\hspace{0.2cm}\\
@@ -140,7 +233,8 @@ F_{ijij} = \frac{1}{f_{ij}^2} \hspace{0.5cm} i,j = r,t,l \hspace{0.2cm} (i\neq j
 \end{equation}
 
 
-Where \(f_{it}\) and \(f_{ic}\) are the tensile and compressive strengths in the \(i\) direction with \(f_{ij}\) the shear strengths. In a simplified case  \(F_{iijj}\) is ignored giving the following \(\boldsymbol{P}\) matrix with no interaction terms:
+Where \(f_{it}\) and \(f_{ic}\) are the tensile and compressive strengths in the \(i\) direction with \(f_{ij}\) the shear strengths.
+In a simplified case  \(F_{iijj}\) is ignored giving the following \(\boldsymbol{P}\) matrix with no interaction terms:
 
 \begin{equation}\label{equ:P_mat_k0}
 \boldsymbol{P}=\begin{bmatrix}
@@ -153,84 +247,182 @@ Where \(f_{it}\) and \(f_{ic}\) are the tensile and compressive strengths in the
 	\end{bmatrix}
 \end{equation}
 
-The system of equations is solved using optimization techniques. As only two of the six stresses are of interest at any one time (due to visualisation requirements), one is set as the independent variable and a linear space set-up to provide each point that will be evaluated (\(n=1000\)), the other four stress directions which are not of interest are set to 0, and the dependent variable is calculated by maximising the distance \(\sqrt{\sigma_{independent}^2+\sigma_{dependent}^2}\) subject to equation \ref{equ:TW}, completed using the scipy.optimize.fmin\_ slsqp algorithm \citep{jones_scipy:_2001}.
-The proportional limit criterion (assumed to be the same as the yield criterion) is reported in all directions, however the ultimate failure criterion is only reported for the tensile tests. In the tensile direction ultimate failure is characterised by very quick drop in stress to near zero, this happens when the sample breaks into two parts. In the compressive direction ultimate failure is harder to define, if it is considered as the start of sample densification, the experimental results in this study are unable to provide the required information. The tests were limited to a maximum strain of 0.25. Other studies in dry wood have shown densification starts at strains greater than 0.5 \citep{gibson_l._ashby_cellular_1997}. When considering the tree as a living structure it is hard to conserve of a case in nature where densification would occur without ultimate tensile failure occurring on the opposite side of the stem.
+The system of equations is solved using optimization techniques. As only two of the six stresses are of interest at any one time
+(due to visualisation requirements), one is set as the independent variable and a linear space set-up to provide each point that
+will be evaluated (\(n=1000\)), the other four stress directions which are not of interest are set to 0, and the dependent variable
+is calculated by maximising the distance \(\sqrt{\sigma_{independent}^2+\sigma_{dependent}^2}\) subject to equation \ref{equ:TW},
+completed using the scipy.optimize.fmin\_ slsqp algorithm \citep{jones_scipy:_2001}.
+The proportional limit criterion (assumed to be the same as the yield criterion) is reported in all directions, however the
+ultimate failure criterion is only reported for the tensile tests. In the tensile direction ultimate failure is characterised
+by very quick drop in stress to near zero, this happens when the sample breaks into two parts. In the compressive direction ultimate
+failure is harder to define, if it is considered as the start of sample densification, the experimental results in this study are unable
+to provide the required information. The tests were limited to a maximum strain of 0.25. Other studies in dry wood have shown densification
+starts at strains greater than 0.5 \citep{gibson_l._ashby_cellular_1997}. When considering the tree as a living structure it is hard to
+conserve of a case in nature where densification would occur without ultimate tensile failure occurring on the opposite side of the stem.
 
 
-\section{Results}
-\subsection{Initial properties}
-A number of descriptive properties of the samples are presented in Table \ref{table:init properties}. Dry density is reported for comparison with green density, the difference in density between core and outer wood is consistent with the change in moisture content. Acoustic velocity follows the same trend as MFA with the samples HW and LS having similar values. The standard deviation of the MFA is an estimate of the spread of angles which the S2 layer contains, which has an influence on stiffness \citep{cave_interpretation_1998}. LS is labelled as corewood, however given its MFA it may well be outer heart wood, or possibly a stiff sample of mature corewood.
+\section{Results and Discussion}
 
-\subsection{Youngs Moduli}
-Table \ref{table:youngs moduli} shows the experimentally obtained Young's moduli. It can be seen that in a number of cases there is a significant difference between the value of the constants and the method used to obtain them. The cellular structure of wood when sheared across the grain appears to act as if under compression, cellular breakdown occurs in compression rather than shear during this test.
+A number of descriptive properties of the samples are presented in Table \ref{table:init properties}.
+As is widely reported the outer wood boards were of higher dry density and lower
+MFA (and in turn faster acoustic velocity) resulting in higher axial dynamic
+modulus. It is important to note that the variation between the extremes is
+larger in corewood than between outerwood samples with the stiff corewood sample
+being of similar properties as the outerwood.
 
-\subsection{Poisson ratios}
-Differences in the Poisson ratios presented in Table \ref{table:poisson ratios} clearly show variation between the testing procedures.
+% The optimised elastic moduli and Poisson ratios are given in Table
+% \ref{table:optermised vals}, with the Poisson ratios obtained from the
+% compression tests, as displacment measures in tensions were at the detection
+% limit.
 
-\subsection{Orthotropic assumption}
-If treating the material as anisotropic Tables \ref{table:youngs moduli} and \ref{table:poisson ratios} give a variety of options along with standard error to use. Depending on the application averaging multiple values may be appropriate. Often wood is assumed to be orthotropic, when this is the case using the above values is not an option due to the assumed symmetry of the material. Table \ref{table:optermised vals} shows the outcome of the optermisation described in section \ref{sec:orthotropic_assumption}.
+The Elastic moduli and Poisson ratios here were obtained through the
+optimization and averaging.
+Table \ref{table:optermised vals average} uses Poisson ratios from the compressive tests, the Elastic moduli from non-longitudinal faces
+where possible and all four faces for the axial direction. Tension and compression values are averaged and optimised.
 
-\subsection{Proportional limits (Yield points)}
-The Elastic moduli and Poisson ratios here were obtained through the optimization. Both optimizations in Table \ref{table:optermised vals} used Poisson ratios from the compression tests, as is discussed later in section \ref{sec:dis_results}, the elastic moduli were split into tension or compression values. \(lr\) uses the Elastic moduli for the axial direction obtained from the longitudinal test using the camera focused on the radial face, \(lt\) uses the tangential face.
-Table \ref{table:optermised vals average} uses Poisson ratios from the compressive tests, the Elastic moduli from non-longitudinal faces where possible and all four faces for the axial direction. Tension and compression values are averaged and optimised.
+Figure \ref{fig:yeild, k0} shows the failure planes calculated as described
+above with no interaction terms. The behaviour of the two core wood samples are
+of interest, while the outer wood samples are stronger in longitudinal tension than compression, the core wood samples are much more centred on the zero axis.
 
-The failure surfaces displayed in Figure \ref{fig:yeild, k0} use the values from Table \ref{table:yield points} with measurements of the direction averaged. As the plots are two dimensional it is assumed for each plot that there are only forces acting in two directions, although it is possible to evaluate up to six directions using the criterion it cannot be displayed.
+Experimentally obtained values are reported in Table \ref{table:yield points}. Measurements of the same directional force
+(eg, \(lr_t\) and \(lt_t\) could be averaged, as they are both measurements of the same  phenomenon.
 
-Figure \ref{fig:yeild, k0} shows the failure planes calculated as described in section \ref{sec:TW} with no interaction terms. The behaviour of the two core wood samples are of interest, while the outer wood samples are stronger in longitudinal tension than compression, the core wood samples are much more centred on the zero axis.
+Table \ref{table:ultimate strength} presents multiple measurements of the same tests,
+reported here as \(lr\) and \(lt\), \(rt\) and \(rl\), \(tr\) and \(tl\). These can be averaged to calculate the three
+ultimate strengths, but are reported separately for completeness.
 
-\subsection{Ultimate strength}
-Experimentally obtained values are reported in Table \ref{table:yield points}. Measurements of the same directional force (eg, \(lr_t\) and \(lt_t\) could be averaged, as they are both measurements of the same  phenomenon.
+The proportional limit surfaces show the propensity for wood to be stronger in the axial tensile direction than any other when considering
+the high density (outerwood) samples. An interesting phenomenon occurs with decreasing density, the samples become more centred or even
+favour compression in the longitudinal direction. Both corewood samples indicate
+the compressive strength is much more important than it is in the outerwood samples
+(which follow the more traditional idea of higher strength in tension).
+Some examples that might have an impact on this are the low second moment of area from the thin
+stem meaning the tree must withstand much more movement from wind, resulting in more compression wood like cells being produced
+ at young ages. Animals stepping on stems causing compressive destruction may have an effect.
+ The trend may also be a by product of a non mechanical pressure. It is possible that because these samples were taken from
+ fully growth trees, (typically 25-30 years old) that over time the material structure has been degraded by growth stresses,
+ or other time/growth dependent phenomenon resulting in a reduction in tensile strength, which is not present if the wood is tested
+ from a young tree.
 
-Table \ref{table:ultimate strength} presents multiple measurements of the same tests, reported here as \(lr\) and \(lt\), \(rt\) and \(rl\), \(tr\) and \(tl\). These can be averaged to calculate the three ultimate strengths, but are reported separately for completeness.
+%All samples show that under radial or tangential loading that compressive
+%stress is favoured. This may be due to the different failure mechanisms in
+% tension and compression, with tension causing peeling between the cells, while compression must act on the cells themselves. If there has been no evolutionary pressure causing the cells to reinforce the connection to resist tension it may
+%result in a significantly lower proportional limit than in compression where
+% the geometry of the cellular structure gives it more strength.
 
+% The Tsai and Wu criterion has been used in a number of papers as discussed in section \ref{sec:TW} however it has been suggested that
+% the criterion is insufficient \citep{p_multi-surface_2003,mackenzie-helnwein_rate-independent_2005}. Because we have assumed linear
+% elastic deformation, with the yield point defined as the end of the linear section of the stress strain curve, no non-linear elastic
+% effects have been considered. These authors suggested that the non-linearity which is usually considered to be non-linear elastic is due
+% to an inelastic portion of the the total strain, so these findings should have little effect on these results.
 
-\section{Discussion}
-\subsection{Discussion of the results}
-\label{sec:dis_results}
+The Elastic and Shear moduli are low although similar to published values for dry wood, as are the Poisson ratios, as can be seen
+in Tables \ref{table:lit_comp} and \ref{table:lit_comp_long}. The lower values presented here are not unexpected due to the samples
+being in green condition and from \textit{Pinus radiata}. In order to accurately quantify the differences between green and dry wood
+values more accurate testing procedures along with a higher number of samples are needed.
 
-The proportional limit surfaces show the propensity for wood to be stronger in the axial tensile direction than any other when considering the high density (outerwood) samples. An interesting phenomenon occurs with decreasing density, the samples become more centred or even favour compression in the longitudinal direction. The two low density samples are both expected to be corewood (although particularly LS may not be). Focusing on the two corewood samples (LS and LW) the LS sample shows a low proportional limit in the longitudinal direction while having a high Elastic modulus. By contrast LW has a much higher proportional limit in most directions, while having a lower Elastic modulus (in the longitudinal direction). Both samples indicate the compressive strength is much more important than it is in the outerwood samples (which follow the more traditional idea of higher strength in tension). It could be speculated that this decrease in tensile proportional limit  compared to compression strength is partially due to the environmental demands placed on young trees (if the samples are in fact corewood). Some examples that might have an impact on this are the low second moment of area from the thin stem meaning the tree must withstand much more movement from wind, resulting in more compression wood like cells being produced at young ages. Animals stepping on stems causing compressive destruction may have an effect. The trend may also be a by product of a non mechanical pressure. It is possible that because these samples were taken from fully growth trees, (typically 25-30 years old) that over time the material structure has been degraded by growth stresses, or other time/growth dependent phenomenon resulting in a reduction in tensile strength, which is not present if the wood is tested from a young tree.
+Corewood needs further investigation as this study provides some interesting results, particularly the failure planes in the
+longitudinal direction. With the corewood samples providing a higher ratio of compressive to tensile strength than outerwood samples.
+Investigation is needed to determine if this is a property of core wood produced by seedlings and young trees, or if it forms
+differently and is modified over time while the tree grows. Again to accurately quantify the difference between dry and green wood
+properties a larger number of more accurate tests are needed.
 
-All samples show that under radial or tangential loading that compressive stress is favoured. This may be due to the different failure mechanisms in tension and compression, with tension causing peeling between the cells, while compression must act on the cells themselves. If there has been no evolutionary pressure causing the cells to reinforce the connection to resist tension it may result in a significantly lower proportional limit than in compression where the geometry of the cellular structure gives it more strength.
+It should be kept in mind that only four boards were tested during this experiment and those boards were selected as extreme cases of
+green density and acoustic velocity. The selection criteria and low sample number result in the selected samples not being representative
+of the species in general. In order to gain an understanding of the 'average' stem further testing is needed.
 
-The Tsai and Wu criterion has been used in a number of papers as discussed in section \ref{sec:TW} however it has been suggested that the criterion is insufficient \citep{p_multi-surface_2003,mackenzie-helnwein_rate-independent_2005}. Because we have assumed linear elastic deformation, with the yield point defined as the end of the linear section of the stress strain curve, no non-linear elastic effects have been considered. These authors suggested that the non-linearity which is usually considered to be non-linear elastic is due to an inelastic portion of the the total strain, so these findings should have little effect on these results.
+% It can be noted from Table \ref{table:mill samples table} that for the given green densities and acoustic velocities obtain using the
+% disk scanner if one were to calculate the dynamic modulus, which has been reported to have a strong correlation to static modulus in
+% the axial direction \citep{lindstrom_stiffness_2004,lindstrom_methods_2002} at usually around a \(1:1\) linear relation the predicted
+% values for the axial modulus become very high. The disk scanner has not been used for samples of this shape before and as a consequence
+% may not have been providing accurate velocities as they differ substantially from those obtained from wood spec.  The use of green wood
+% may also have had an effect. The ranking of the samples does however fit with the persevered ranking when the boards were selected at the
+% mill, and the density values. Both the acoustic velocities, green and dry densities, in general, have higher values for higher strength
+% and stiffness boards. Low density core-wood samples have a low strength and stiffness compared to the outer-wood samples.
 
-The Elastic and Shear moduli are low although similar to published values for dry wood, as are the Poisson ratios, as can be seen in Tables \ref{table:lit_comp} and \ref{table:lit_comp_long}. The lower values presented here are not unexpected due to the samples being in green condition and from \textit{Pinus radiata}. In order to accurately quantify the differences between green and dry wood values more accurate testing procedures along with a higher number of samples are needed.
+% Because in many cases a number of constants could be obtained by different methods from one or more tests there is a need to select the
+%  measurements which best resemble the real underlying physical characteristics. While all of the results are reported above for
+%  completeness, the following is a discussion to consider which are the more accurate solutions.
 
-Corewood needs further investigation as this study provides some interesting results, particularly the failure planes in the longitudinal direction. With the corewood samples providing a higher ratio of compressive to tensile strength than outerwood samples. Investigation is needed to determine if this is a property of core wood produced by seedlings and young trees, or if it forms differently and is modified over time while the tree grows. Again to accurately quantify the difference between dry and green wood properties a larger number of more accurate tests are needed.
+% Measurements in the horizontal direction can be ignored when considering tensile tests, this is due to the resolution of the
+% cameras not being high enough to resolve the contraction on the samples in the horizontal direction. The low tensile strength
+% in the radial and tangential directions results in very low dimension changes before both the proportional limit and the rupture
+% of the sample. Although in the longitudinal direction the samples have a much higher breaking strength the reliability of the
+% measurements of contraction in the horizontal direction is also suspect. Generally tracking of the longitudinal face of the samples
+% is more error prone than the other two faces, it is suspected this is because of the uniformity of the image over the samples in
+%  this direction, whereas in the other two directions early and late wood give identifiable points within the images used by the
+%  point tracking algorithm. In the vertical direction the samples are tracked more reliably due to the greater number of pixels and
+%   the greater displacement of the sample due to its shape. In the future artificially adding a random speckle pattern should be
+%   considered to increase the accuracy of point tracking.
 
+% Extension data extracted from the UTM can be ignored for all tension tests as the jaws which hold the sample are self tightening
+% using a mechanism which provides an increase in extension reading at the machine without it being transferred to the sample.
+% On samples of this size the effect was significant.
+%
+% Compression tests are used for calculating all of the Poisson ratios. Absolute values of constants obtained from tracking on
+% longitudinal faces appear to be low, however the Poisson ratios generally agree with the ratios gained from the other tests.
+% Due to the implementation of the image tracking algorithm, if the algorithm does not detect the identifiable group of pixels
+% in the new image it simply leaves the point with no displacement. It is suspected that the assumption that points tracked well
+% in the vertical direction will also be tracked well in the horizontal direction holds true, along with its corollary, points
+% which remain stationary due to poor tracking in the vertical direction will also remain stationary in the horizontal direction.
+% The result of this is that although the absolute values for the displacement in both directions is highly suspect the ratio of
+% observed displacement in the vertical and horizontal direction still provides a good estimate of the true value of the ratio
+% because every time a displacement is observed in one direction, the associated displacement in the other direction is also observed.
+% Because of the errors in the magnitude of the displacements when it can be avoided these values were not used. This not possible
+% when calculating Poisson ratios, or the elastic modulus when force is applied in the longitudinal direction, as both cameras image
+% a longitudinal face. For the radial and tangential directions of compression and tension the elastic modulus was calculated from
+% the camera which had a view of the growth rings and hence provided more robust image tracking.
 
-\subsection{Sources of error in this study}
-\label{sec:dis_error}
+% The nature of shear tests means some of the force applied is dissipated through rotation of the sample block, the magnitude of
+% this is expected to be significant due to the unexpectedly low values for the shear moduli. In some cases this rotational force
+% results in breakage of the sample specimen via cell wall peeling in the plane perpendicular to the desired shear plane.
+% Where the shear plane attempts to break the cells directly (ie shear plane perpendicular to the cell axis) bowing is observed
+% around the bottom sample rest, this also dissipates energy further reducing the accuracy of the tests. It is worth noting that
+% other testing methods for determining shear characteristics such as those presented in \citep{bs_methods_1957} and
+% \citep{kollmann_f._cote_principles_1968} may provide more reliable solutions however these require more specialist equipment.
+% The difficulty in obtaining accurate shear measurements has been reported on before
+%  \citep{kollmann_f._cote_principles_1968, bodig_jozsef_jayne_mechanics_1982}. \citet{kollmann_f._cote_principles_1968}
+%  reported shearing stress perpendicular to grain are 3-4 times higher than parallel to it.
 
-It should be kept in mind that only four boards were tested during this experiment and those boards were selected as extreme cases of green density and acoustic velocity. The selection criteria and low sample number result in the selected samples not being representative of the species in general. In order to gain an understanding of the 'average' stem further testing is needed.
+%
+% It can be seen from the data tables that generally the compressive tests result in higher elastic modulus values than
+%  the tension tests. One explanation for this may be the documented dependence of the moduli on the dimensions of the
+%  sample \citep{niklas_mechanical_1997}, with the tension tests being smaller than the compression tests this may lead
+%  to lower outcomes. However what this does not explain is why the tension tests in the longitudinal direction of the
+%  two outerwood samples (Stiff Outerwood and Non-Stiff Outerwood) are substantially larger than those in compression.
+%  Another possible reason for this is that it is a genuine material property which is accentuated in outerwood indicating
+%   it may be less well described by the assumption of an orthotropic material than core wood.
 
-It can be noted from Table \ref{table:mill samples table} that for the given green densities and acoustic velocities obtain using the disk scanner if one were to calculate the dynamic modulus, which has been reported to have a strong correlation to static modulus in the axial direction \citep{lindstrom_stiffness_2004,lindstrom_methods_2002} at usually around a \(1:1\) linear relation the predicted values for the axial modulus become very high. The disk scanner has not been used for samples of this shape before and as a consequence may not have been providing accurate velocities as they differ substantially from those obtained from wood spec.  The use of green wood may also have had an effect. The ranking of the samples does however fit with the persevered ranking when the boards were selected at the mill, and the density values. Both the acoustic velocities, green and dry densities, in general, have higher values for higher strength and stiffness boards. Low density core-wood samples have a low strength and stiffness compared to the outer-wood samples.
+% When testing in pure compression or tension producing samples which are exactly in the desired direction is near
+% impossible due to the variations in properties during the growth of the tree. While every effort was taken to minimise
+%  the effect of this, in some cases, particularly in core wood with wide grain spacing it is not possible for the given
+%   sample size, due to the radius of the rings. The Poisson ratios may be affected by the specimen not having all three
+%   directions perfectly perpendicular. Some samples may be cut from boards with spiral grain but no samples with visible
+%   spiral grain were used. It is thought that while this is an issue to note, it is unlikely to be substantially decrease
+%   the accuracy of the measurements given the magnitude of other errors also discussed here.
 
-Because in many cases a number of constants could be obtained by different methods from one or more tests there is a need to select the measurements which best resemble the real underlying physical characteristics. While all of the results are reported above for completeness, the following is a discussion to consider which are the more accurate solutions.
+% During compression testing it was observed that samples compressed in the tangential direction tend to bow in the same
+% direction as the grain, this is much more evident in corewood where the curvature of the grain is larger.
+% The bending may have some effect on the accuracy of the findings, but to what extent is unknown.
 
-Measurements in the horizontal direction can be ignored when considering tensile tests, this is due to the resolution of the cameras not being high enough to resolve the contraction on the samples in the horizontal direction. The low tensile strength in the radial and tangential directions results in very low dimension changes before both the proportional limit and the rupture of the sample. Although in the longitudinal direction the samples have a much higher breaking strength the reliability of the measurements of contraction in the horizontal direction is also suspect. Generally tracking of the longitudinal face of the samples is more error prone than the other two faces, it is suspected this is because of the uniformity of the image over the samples in this direction, whereas in the other two directions early and late wood give identifiable points within the images used by the point tracking algorithm. In the vertical direction the samples are tracked more reliably due to the greater number of pixels and the greater displacement of the sample due to its shape. In the future artificially adding a random speckle pattern should be considered to increase the accuracy of point tracking.
+% It has been reported that the size of samples of wood when tested for elastic constants can have an effect on the
+%  result \citep{niklas_mechanical_1997}. While size dependence is an important note to be aware of controlling for
+%  this would require using samples which do not necessarily provide a good representation of a homogeneous piece of wood.
+%  The sample sizes in this study most likely also suffer when compared to other tests utilising different sized samples.
+%  It is important to use data collected from specimens which best represent the level of homogenisation required for the
+%  particular end use. Given current personal computing resources, this size specimen provides a good resolution for finite
+%  element models of an entire stem in the horizontal plane. The vertical direction shows much lower deviation of material
+%  properties per unit length, so the sample dimension is less important, hence can be reduced in order to give clean samples
+%  without defects.
+%
+% Experimental errors from changing dimensions within the UTM under loading are assumed to be negligible (with the exception
+% of the mechanisms of the jaws used for tension tests). The load cells are reported to be accurate to 0.1N and hence are also
+% negligible when compared to the major sources of error in these tests, the image tracking.
 
-Extension data extracted from the UTM can be ignored for all tension tests as the jaws which hold the sample are self tightening using a mechanism which provides an increase in extension reading at the machine without it being transferred to the sample. On samples of this size the effect was significant.
-
-Compression tests are used for calculating all of the Poisson ratios. Absolute values of constants obtained from tracking on longitudinal faces appear to be low, however the Poisson ratios generally agree with the ratios gained from the other tests. Due to the implementation of the image tracking algorithm, if the algorithm does not detect the identifiable group of pixels in the new image it simply leaves the point with no displacement. It is suspected that the assumption that points tracked well in the vertical direction will also be tracked well in the horizontal direction holds true, along with its corollary, points which remain stationary due to poor tracking in the vertical direction will also remain stationary in the horizontal direction. The result of this is that although the absolute values for the displacement in both directions is highly suspect the ratio of observed displacement in the vertical and horizontal direction still provides a good estimate of the true value of the ratio because every time a displacement is observed in one direction, the associated displacement in the other direction is also observed. Because of the errors in the magnitude of the displacements when it can be avoided these values were not used. This not possible when calculating Poisson ratios, or the elastic modulus when force is applied in the longitudinal direction, as both cameras image a longitudinal face. For the radial and tangential directions of compression and tension the elastic modulus was calculated from the camera which had a view of the growth rings and hence provided more robust image tracking.
-
-The nature of shear tests means some of the force applied is dissipated through rotation of the sample block, the magnitude of this is expected to be significant due to the unexpectedly low values for the shear moduli. In some cases this rotational force results in breakage of the sample specimen via cell wall peeling in the plane perpendicular to the desired shear plane. Where the shear plane attempts to break the cells directly (ie shear plane perpendicular to the cell axis) bowing is observed around the bottom sample rest, this also dissipates energy further reducing the accuracy of the tests. It is worth noting that other testing methods for determining shear characteristics such as those presented in \citep{bs_methods_1957} and \citep{kollmann_f._cote_principles_1968} may provide more reliable solutions however these require more specialist equipment. The difficulty in obtaining accurate shear measurements has been reported on before \citep{kollmann_f._cote_principles_1968, bodig_jozsef_jayne_mechanics_1982}. \citet{kollmann_f._cote_principles_1968}  reported shearing stress perpendicular to grain are 3-4 times higher than parallel to it.
-
-
-It can be seen from the data tables that generally the compressive tests result in higher elastic modulus values than the tension tests. One explanation for this may be the documented dependence of the moduli on the dimensions of the sample \citep{niklas_mechanical_1997}, with the tension tests being smaller than the compression tests this may lead to lower outcomes. However what this does not explain is why the tension tests in the longitudinal direction of the two outerwood samples (HS and HW) are substantially larger than those in compression. Another possible reason for this is that it is a genuine material property which is accentuated in outerwood indicating it may be less well described by the assumption of an orthotropic material than core wood.
-
-When testing in pure compression or tension producing samples which are exactly in the desired direction is near impossible due to the variations in properties during the growth of the tree. While every effort was taken to minimise the effect of this, in some cases, particularly in core wood with wide grain spacing it is not possible for the given sample size, due to the radius of the rings. The Poisson ratios may be affected by the specimen not having all three directions perfectly perpendicular. Some samples may be cut from boards with spiral grain but no samples with visible spiral grain were used. It is thought that while this is an issue to note, it is unlikely to be substantially decrease the accuracy of the measurements given the magnitude of other errors also discussed here.
-
-During compression testing it was observed that samples compressed in the tangential direction tend to bow in the same direction as the grain, this is much more evident in corewood where the curvature of the grain is larger. The bending may have some effect on the accuracy of the findings, but to what extent is unknown.
-
-It has been reported that the size of samples of wood when tested for elastic constants can have an effect on the result \citep{niklas_mechanical_1997}. While size dependence is an important note to be aware of controlling for this would require using samples which do not necessarily provide a good representation of a homogeneous piece of wood. The sample sizes in this study most likely also suffer when compared to other tests utilising different sized samples. It is important to use data collected from specimens which best represent the level of homogenisation required for the particular end use. Given current personal computing resources, this size specimen provides a good resolution for finite element models of an entire stem in the horizontal plane. The vertical direction shows much lower deviation of material properties per unit length, so the sample dimension is less important, hence can be reduced in order to give clean samples without defects.
-
-Experimental errors from changing dimensions within the UTM under loading are assumed to be negligible (with the exception of the mechanisms of the jaws used for tension tests). The load cells are reported to be accurate to 0.1N and hence are also negligible when compared to the major sources of error in these tests, the image tracking.
-
-This paper did not consider interaction terms within the \textbf{P} matrix, \citet{tsai_general_1971} suggest the use of experimentation to find the appropriate interaction terms for use within their strength criterion. Further research should not only focus on increasing the size and accuracy of data sets of anisotropic constants but also include these interaction terms to increase the accuracy of further calculation.
-
-\section{Conclusion}
-Through experimentation using a universal testing machine the constants required to mechanically describe \textit{Pinus radiata} green core and outer wood as an elastic orthotropic material are presented. Limit of proportionality surfaces are also presented along with ultimate tensile strength. Within the study there are a number of errors effecting the results which are discussed. These results provide an important data set for mathematical modelling of mechanical properties of living tree stems and timber in green condition.
+This paper did not consider interaction terms within the \textbf{P} matrix, \citet{tsai_general_1971} suggest the use of
+experimentation to find the appropriate interaction terms for use within their strength criterion. Further research should
+not only focus on increasing the size and accuracy of data sets of anisotropic constants but also include these interaction
+terms to increase the accuracy of further calculation.
 
 \pagebreak
 
@@ -270,13 +462,13 @@ Through experimentation using a universal testing machine the constants required
 % \end{center}
 % \end{figure}
 %
-% \begin{figure}[!ht]
-% \begin{center}
-% \includegraphics[width=130mm,keepaspectratio]{figs/00_tw_failure.pdf}
-% \caption[Proportional limit sufaces, no interaction]{\label{fig:yeild, k0} Proportional limit surfaces calculated using \citet{tsai_general_1971} failure criterion with no interaction for all failure planes.
-% }
-% \end{center}
-% \end{figure}
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=130mm,keepaspectratio]{figs/00_tw_failure.pdf}
+\caption[Proportional limit sufaces, no interaction]{\label{fig:yeild, k0} Proportional limit surfaces calculated using \citet{tsai_general_1971} failure criterion with no interaction for all failure planes.
+}
+\end{center}
+\end{figure}
 %
 % \pagebreak
 
@@ -287,10 +479,10 @@ Through experimentation using a universal testing machine the constants required
 Sample & Green Density & Acoustic velocity & Approximate & Type of wood\\
        &               &                   & ring number &              \\
 \hline
-HS& high & high & \(>15\) & Sapwood\\
-HW& high & low & \(>15\) & Sapwood\\
-LS& low & high & \(<15\) & Heartwood\\
-LW& low & low & \(<15\) & Heartwood\\
+Stiff Outerwood& high & high & \(>15\) & Sapwood\\
+Non-Stiff Outerwood& high & low & \(>15\) & Sapwood\\
+Stiff Corewood& low & high & \(<15\) & Heartwood\\
+Non-Stiff Corewood& low & low & \(<15\) & Heartwood\\
 \hline
 \end{tabular}
 \end{table}
@@ -300,7 +492,8 @@ LW& low & low & \(<15\) & Heartwood\\
 \label{table:init properties}
 \begin{tabular}{l l l l l}
 \hline
-Property & HS & HW & LS & LW\\
+Property & Stiff Outerwood & Non-Stiff Outerwood & Stiff Corewood & Non-Stiff
+Corewood\\
 \hline
 Green Density, \(kg/m^3\) & 1143 (3) & 1099 (9) & 933 (21) & 818 (22) \\
 %Standard Error, \(kg/m^3\) & 3 & 9 & 21 & 22 \\
@@ -325,7 +518,7 @@ of MFA \(Degrees\)&   &  &   &   \\
 \label{table:youngs moduli}
 \begin{tabular}{lllllllll}
 \hline
-Direction& HS && HW && LS && LW &\\
+Direction& Stiff Outerwood && Non-Stiff Outerwood && Stiff Corewood && Non-Stiff Corewood &\\
  & \(E\)&\(SE\)& \(E\)&\(SE\)& \(E\)&\(SE\)& \(E\)&\(SE\)\\
 \hline
 \(rt_t\) in \(GPa\) & 0.40 & 0.11 & 0.24 & 0.05 & 0.13 & 0.01 & 0.16 & 0.01 \\
@@ -353,7 +546,7 @@ Direction& HS && HW && LS && LW &\\
 \label{table:poisson ratios}
 \begin{tabular}{lllllllll}
 \hline
-Direction& HS&& HW&& LS&&LW&\\
+Direction& Stiff Outerwood&& Non-Stiff Outerwood&& Stiff Corewood&&Non-Stiff Corewood&\\
  & \(v\)&\(SE\)& \(v\)&\(SE\)& \(v\)&\(SE\)& \(v\)&\(SE\)\\
 \hline
 \(rt_t\) & 0.21 & 0.10 & 0.30 & 0.08& 0.27 & 0.12& 0.08 & 0.01\\
@@ -372,51 +565,51 @@ Direction& HS&& HW&& LS&&LW&\\
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption[Orthotropic material constants]{Optimized values for the orthotropic assumption. All Poisson ratios used are from compression tests for reasons described in section \ref{sec:orthotropic_assumption} the moduli are reported from both the compression and tension tests}
-\label{table:optermised vals}
-\begin{tabular}{l l l l l l l l l l}
-\hline
-Compression	&	&	&	&	&	&	&	&	&\\
-Axial direction	&Long-rad	&	&	&	&	&Long-tan	&	&	&\\
-Constant	&HS	&HW	&LS	&LW	&	&HS	&HW	&LS	&LW\\
-\(E_r\)	&0.58	&0.39	&0.43	&0.29	&	&0.66	&0.49	&0.39	&0.29\\
-\(E_t\)	&0.33	&0.35	&0.29	&0.26	&	&0.37	&0.35	&0.29	&0.26\\
-\(E_l\)	&3.10	&1.04	&4.17	&4.04	&	&4.33	&1.45	&4.63	&3.56\\
-\(v_{rt}\)	&0.64	&0.36	&0.60	&0.49	&	&0.64	&0.46	&0.60	&0.49\\
-\(v_{rl}\)	&0.06	&0.15	&0.04	&0.03	&	&0.06	&0.15	&0.03	&0.04\\
-\(v_{tr}\)	&0.37	&0.33	&0.41	&0.42	&	&0.36	&0.33	&0.45	&0.42\\
-\(v_{tl}\)	&0.05	&0.05	&0.03	&0.04	&	&0.05	&0.04	&0.03	&0.04\\
-\(v_{lr}\)	&0.30	&0.41	&0.36	&0.44	&	&0.36	&0.45	&0.36	&0.44\\
-\(v_{lt}\)	&0.45	&0.16	&0.37	&0.57	&	&0.56	&0.16	&0.41	&0.50\\
-&	&	&	&	&	&	&	&	&\\
-\hline
-&	&	&	&	&	&	&	&	&\\
-Tension	&	&	&	&	&	&	&	&	&\\
-Axial direction	&Long-rad	&	&	&	&	&Long-tan	&	&	&\\
-Constant	&HS	&HW	&LS	&LW	&	&HS	&HW	&LS	&LW\\
-\(E_r\)&0.40	&0.34	&0.14	&0.16	&	&0.22	&0.34	&0.14	&0.16\\
-\(E_t\)&0.16	&0.22	&0.16	&0.09	&	&0.16	&0.23	&0.16	&0.09\\
-\(E_l\)	&5.06	&3.73	&2.26	&1.37	&	&4.98	&2.76	&2.26	&1.76\\
-\(v_{rt}\)&0.64	&0.52	&0.50	&0.75	&	&0.64	&0.52	&0.50	&0.73\\
-\(v_{rl}\)&0.02	&0.05	&0.02	&0.05	&	&0.01	&0.05	&0.02	&0.04\\
-\(v_{tr}\)&0.26	&0.33	&0.56	&0.42	&	&0.47	&0.34	&0.56	&0.42\\
-\(v_{tl}\)	&0.02	&0.01	&0.03	&0.04	&	&0.02	&0.01	&0.03	&0.04\\
-\(v_{lr}\)	&0.26	&0.55	&0.36	&0.44	&	&0.26	&0.41	&0.36	&0.44\\
-\(v_{lt}\)	&0.64	&0.16	&0.37	&0.55	&	&0.64	&0.16	&0.37	&0.69\\
+% \begin{table}
+% \caption[Orthotropic material constants]{Optimized values for the orthotropic assumption. All Poisson ratios used are from compression tests for reasons described in section \ref{sec:orthotropic_assumption} the moduli are reported from both the compression and tension tests}
+% \label{table:optermised vals}
+% \begin{tabular}{l l l l l l l l l l}
+% \hline
+% Compression	&	&	&	&	&	&	&	&	&\\
+% Axial direction	&Long-rad	&	&	&	&	&Long-tan	&	&	&\\
+% Constant	&Stiff Outerwood	&Non-Stiff Outerwood	&Stiff Corewood	&Non-Stiff Corewood	&	&Stiff Outerwood	&Non-Stiff Outerwood	&Stiff Corewood	&Non-Stiff Corewood\\
+% \(E_r\)	&0.58	&0.39	&0.43	&0.29	&	&0.66	&0.49	&0.39	&0.29\\
+% \(E_t\)	&0.33	&0.35	&0.29	&0.26	&	&0.37	&0.35	&0.29	&0.26\\
+% \(E_l\)	&3.10	&1.04	&4.17	&4.04	&	&4.33	&1.45	&4.63	&3.56\\
+% \(v_{rt}\)	&0.64	&0.36	&0.60	&0.49	&	&0.64	&0.46	&0.60	&0.49\\
+% \(v_{rl}\)	&0.06	&0.15	&0.04	&0.03	&	&0.06	&0.15	&0.03	&0.04\\
+% \(v_{tr}\)	&0.37	&0.33	&0.41	&0.42	&	&0.36	&0.33	&0.45	&0.42\\
+% \(v_{tl}\)	&0.05	&0.05	&0.03	&0.04	&	&0.05	&0.04	&0.03	&0.04\\
+% \(v_{lr}\)	&0.30	&0.41	&0.36	&0.44	&	&0.36	&0.45	&0.36	&0.44\\
+% \(v_{lt}\)	&0.45	&0.16	&0.37	&0.57	&	&0.56	&0.16	&0.41	&0.50\\
+% &	&	&	&	&	&	&	&	&\\
+% \hline
+% &	&	&	&	&	&	&	&	&\\
+% Tension	&	&	&	&	&	&	&	&	&\\
+% Axial direction	&Long-rad	&	&	&	&	&Long-tan	&	&	&\\
+% Constant	&Stiff Outerwood	&Non-Stiff Outerwood	&Stiff Corewood	&Non-Stiff Corewood	&	&Stiff Outerwood	&Non-Stiff Outerwood	&Stiff Corewood	&Non-Stiff Corewood\\
+% \(E_r\)&0.40	&0.34	&0.14	&0.16	&	&0.22	&0.34	&0.14	&0.16\\
+% \(E_t\)&0.16	&0.22	&0.16	&0.09	&	&0.16	&0.23	&0.16	&0.09\\
+% \(E_l\)	&5.06	&3.73	&2.26	&1.37	&	&4.98	&2.76	&2.26	&1.76\\
+% \(v_{rt}\)&0.64	&0.52	&0.50	&0.75	&	&0.64	&0.52	&0.50	&0.73\\
+% \(v_{rl}\)&0.02	&0.05	&0.02	&0.05	&	&0.01	&0.05	&0.02	&0.04\\
+% \(v_{tr}\)&0.26	&0.33	&0.56	&0.42	&	&0.47	&0.34	&0.56	&0.42\\
+% \(v_{tl}\)	&0.02	&0.01	&0.03	&0.04	&	&0.02	&0.01	&0.03	&0.04\\
+% \(v_{lr}\)	&0.26	&0.55	&0.36	&0.44	&	&0.26	&0.41	&0.36	&0.44\\
+% \(v_{lt}\)	&0.64	&0.16	&0.37	&0.55	&	&0.64	&0.16	&0.37	&0.69\\
+%
+% \hline
+% \end{tabular}
+% \end{table}
 
-\hline
-\end{tabular}
-\end{table}
-
 \begin{table}
-\caption[Averaged orthotropic material constants]{Optimized values for the orthotropic assumption. All Poisson ratios used are from compression tests for reasons described in section \ref{sec:dis_error} the moduli are reported calculated from averages of tension and compression. In the \(r\) and \(t\) directions this is the average of tension and compression from the camera viewing the \(rt\) or \(tr\) plane. In the longitudinal direction it is the average of all four image sets.}
+\caption[Averaged orthotropic material constants]{Optimized values for the orthotropic assumption. All Poisson ratios used are from compression teststhe moduli are reported calculated from averages of tension and compression. In the \(r\) and \(t\) directions this is the average of tension and compression from the camera viewing the \(rt\) or \(tr\) plane. In the longitudinal direction it is the average of all four image sets.}
 \label{table:optermised vals average}
 \begin{tabular}{lllll}
 \hline
 Average	&	    &	    &	    &   \\
 Direction&  	&	    &	    &   \\
-	    &HS	    &HW	    &LS	    &LW \\
+	    &Stiff Outerwood	    &Non-Stiff Outerwood	    &Stiff Corewood	    &Non-Stiff Corewood \\
 \(E_r\)	    &0.49	&0.30	&0.26	&0.31\\
 \(E_t\)	    &0.25	&0.19	&0.24	&0.17\\
 \(E_l\)	    &4.36	&2.81	&3.50	&2.38\\
@@ -437,7 +630,7 @@ Direction&  	&	    &	    &   \\
 \label{table:yield points}
 \begin{tabular}{lllllllll}
 \hline
-Direction & HS && HW && LS && LW & \\
+Direction & Stiff Outerwood && Non-Stiff Outerwood && Stiff Corewood && Non-Stiff Corewood & \\
  & \(S\)&\(SE\)& \(S\)&\(SE\)& \(S\)&\(SE\)& \(S\)&\(SE\)\\
 \hline
 \(rt_t\) & 0.8 & 0.2& 1.3& 0.5& 1.2 & 0.3& 0.9 & 0.1 \\
@@ -464,7 +657,7 @@ Direction & HS && HW && LS && LW & \\
 \label{table:ultimate strength}
 \begin{tabular}{lllllllll}
 \hline
-Direction& HS && HW && LS && LW &\\
+Direction& Stiff Outerwood && Non-Stiff Outerwood && Stiff Corewood && Non-Stiff Corewood &\\
  & \(S\)&\(SE\)& \(S\)&\(SE\)& \(S\)&\(SE\)& \(S\)&\(SE\)\\
 \hline
 \(rt\) & 3.1 & 0.3& 3.1& 0.3& 2.9 & 0.2& 2.2 & 0.2 \\
